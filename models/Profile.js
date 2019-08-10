@@ -39,8 +39,7 @@ const ProfileSchema = new mongoose.Schema({
         required: true
       },
       location: {
-        type: String,
-        required: true
+        type: String
       },
       from: {
         type: Date,
@@ -51,36 +50,13 @@ const ProfileSchema = new mongoose.Schema({
       },
       current: {
         type: Boolean,
-        required: true
+        default: false
       },
       description: {
         type: String
       }
     }
   ],
-  company: {
-    type: String
-  },
-  website: {
-    type: String
-  },
-  location: {
-    type: String
-  },
-  status: {
-    type: String,
-    required: true
-  },
-  skills: {
-    type: [String],
-    required: true
-  },
-  bio: {
-    type: String
-  },
-  githubusername: {
-    type: String
-  },
   education: [
     {
       school: {
@@ -104,7 +80,7 @@ const ProfileSchema = new mongoose.Schema({
       },
       current: {
         type: Boolean,
-        required: true
+        default: false
       },
       description: {
         type: String
